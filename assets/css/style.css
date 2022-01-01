@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --gray: #727272;
+  --gray-light: #dadada;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", "Arial";
+}
+
+/*===========Navigation===========*/
+body {
+  margin: 0px;
+  background-color: aliceblue;
+}
+.dashboard {
+  margin: 0px;
+}
+.navigation {
+  display: flex;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+.user {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+.navigation .material-icons-outlined {
+  margin: auto 10px;
+  color: var(--gray);
+  font-size: 30px;
+}
+
+/*=======Main dashboard=========== */
+/* Search */
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 10px 50px 10px;
+
+  position: relative;
+}
+.search input {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid var(--gray-light);
+  background-color: transparent;
+  font-size: 16px;
+  padding: 5px 5px 5px 60px;
+  margin-top: 10px;
+}
+.search form span {
+  position: absolute;
+  left: 15px;
+
+  color: var(--gray-light);
+}
+
+.notification :nth-child(1) {
+  margin-right: 15px;
+}
+.main .title {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 10px 30px 10px;
+}
+.icon_google {
+  margin-top: 10px;
+}
+.select_project {
+  margin-top: 15px;
+}
+.title h2 {
+  font-size: 25px;
+  line-height: 0px;
+}
+.title label {
+  color: #727272;
+  font-size: 13px;
+}
+.title select {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+}
+/* List project */
+.project h2 {
+  line-height: 0px;
+}
+.project p {
+  color: #727272;
+}
+.activity li {
+  list-style: none;
+  font-size: 16px;
+  position: relative;
+}
+ul.activity {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.activity li::before {
+  content: "-";
+  padding-right: 5px;
+}
+.meta img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.meta img:not(:first-child) {
+  margin-left: -15px;
+}
+.meta {
+  display: flex;
+  justify-content: space-between;
+}
+.project {
+  padding: 20px 20px 20px 60px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.project .category {
+  content: "";
+  width: 25px;
+  height: 35px;
+  border-radius: 0px 10px 10px 0px;
+  position: absolute;
+  background-color: red;
+  left: 0px;
+  top: 5px;
+}
+.category_color1 {
+  background-color: royalblue !important;
+}
+.category_color2 {
+  background-color: sienna !important;
+}
+.category_color3 {
+  background-color: tan !important;
+}
+.category_color4 {
+  background-color: violet !important;
+}
+/* ==================Statistic================== */
+/* Chart*/
+.chart {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border-radius: 10px;
+}
+.chart h2 {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.chart .complete {
+  line-height: 0px;
+  text-align: center;
+}
+.chart .complete p {
+  font-size: 14px;
+  color: #727272;
+}
+
+/* Recent Project*/
+.recent_project .listing {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-top: 20px;
+  position: relative;
+  line-height: 0px;
+}
+
+.recent_project .listing h2 {
+  font-size: 18px;
+  padding-bottom: 6px;
+}
+.recent_project .listing p {
+  font-size: 13px;
+  color: #727272;
+}
+.recent_project {
+  background-color: white;
+  padding-top: 10px;
+  margin: 0px 0px 10px 0px;
+  border-radius: 10px;
+}
+.recent_project .category {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  left: 10px;
+  margin-top: 15px;
+}
+.material-icons-outlined {
+  margin-top: 15px;
+}
+
+/* ====================Media query============  */
+
+@media screen and (min-width: 768px) {
+  .project_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .project_list .project {
+    width: 340px;
+  }
+  .secondary {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+  .secondary .chart {
+    width: 47%;
+  }
+  .secondary .recent_project {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .navigation .material-icons-outlined {
+    font-size: 20px;
+  }
+  .logo,
+  .user {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .navigation,
+  .main,
+  .secondary,
+  .test {
+    display: block;
+  }
+
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60px;
+    position: fixed;
+    z-index: 10;
+    height: 100%;
+    padding: 35px 0px;
+  }
+  .dashboard .main {
+    margin-left: 70px;
+    width: 67%;
+  }
+  .dashboard .secondary {
+    position: fixed;
+    width: 22%;
+    top: 0px;
+    right: 0px;
+  }
+  .project_list .project {
+    width: 280px;
+    margin: 10px;
+  }
+  section.secondary .chart,
+  section.secondary .recent_project {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .secondary {
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+  }
+  .chart {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .search {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .project {
+    padding: 5px 5px 5px 40px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    position: relative;
+  }
+  .navigation .material-icons-outlined {
+    padding-top: 20px;
+  }
+}
